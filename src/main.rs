@@ -11,9 +11,7 @@ use std::process;
 fn run() -> Result<exit_codes::ExitCode> {
     let matches = app::build_app().get_matches();
 
-    if let Some(subcommand) = matches.subcommand() {
-        let (subcommand_name, _) = subcommand;
-
+    if let (subcommand_name, Some(_)) = matches.subcommand() {
         match subcommand_name {
             "login" => {
                 return subcommand::login();

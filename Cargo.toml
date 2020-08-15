@@ -3,9 +3,11 @@ name = "mf_attendance"
 version = "0.1.0"
 authors = ["alpaca-tc <alpaca-tc@alpaca.tc>"]
 edition = "2018"
+license = "MIT"
+repository = "https://github.com/mf_attendance-rs"
 
 [dependencies]
-clap = { git = "https://github.com/clap-rs/clap" }
+clap = "2.33.2"
 anyhow = "1.0.32"
 reqwest = { version = "0.10.7", features = ["blocking", "json"] }
 chrono = "0.4.13"
